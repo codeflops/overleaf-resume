@@ -1,0 +1,233 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{extarticle} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+% \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+% \fontspec{[FontAwesome.otf]}
+\setmainfont[Path = ./Ubuntu/,  %% Optional; but UPDATE this if 
+                         %% your font files are in a folder
+ Extension = .ttf,
+ UprightFont = *-Regular,
+ BoldFont = *-Bold,
+ ItalicFont = *-Italic,
+ SmallCapsFont = *-Medium]
+{Ubuntu}
+\fontspec{[fontawesome-webfont.ttf]}
+
+\usepackage{color}
+\definecolor{primary}{RGB}{107, 16, 86}
+\definecolor{secondary}{RGB}{0, 0, 0}
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be 
+%\usepackage{fullpage}
+\usepackage{geometry}
+\geometry{a4paper,margin=0.40cm}
+%\geometry{a4paper,left=20mm, top=20mm}
+ %To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+%\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\definecolor{linkcolour}{rgb}{0.3,0.3,0.3} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{0pt}{0pt} % Spacing around sections
+
+\usepackage{multicol}
+\setlength{\columnsep}{0cm}
+
+\usepackage{tabularx}
+
+\usepackage{textcomp}
+
+\usepackage{fontawesome}
+
+\usepackage{enumitem}
+\setlist[description]{%
+  topsep=10pt,               % space before start / after end of list
+  itemsep=1pt,               % space between items
+%  font={\bfseries\sffamily\color{red}}, % if colour is needed
+}
+
+\def\arraystretch{1}
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+%\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+\begin{multicols}{3}
+\normalsize  \faGlobe\ {\href{https://baymac.github.io/}{\  baymac.github.io}}\\
+\normalsize \faGithub\ {\href{https://github.com/baymac}{\  baymac}}\\
+\normalsize  \faLinkedinSquare\ {\href{https://www.linkedin.com/in/parichaybarpanda/}{\  parichaybarpanda}}\\
+\columnbreak
+\normalsize\par{\centering{\huge\textsc{\textcolor{primary}{Parichay Barpanda}}}\par} % Your name
+\par{\centering\normalsize {\textsc{VS Hall of Residence, NIT Rourkela, OD, India - 769008}}\hfill\par}
+\columnbreak
+\raggedright\hfill\normalsize \faEnvelope\ {\href{mailto:parichay.barpanda@gmail.com}{\  parichay.barpanda@gmail.com}}\\
+\raggedright\hfill{\faPhone\ \  +91-8249490869}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\vspace{-0.8cm}
+\section{\textcolor{primary}{Academics}}
+
+\begin{tabular}{r|p{17.5cm}}	
+\textbf{2014-2019} & \textit{B.Tech + M.Tech (Dual Degree)} in \textbf{Electronics Engineering, NIT Roukela}\\
+\hfill GPA & \textbf{6.52/10}\\
+\textbf{2014} & \textit{Higher Secondary School Certificate Examination}, \textbf{CBSE}\\
+\hfill GPA & \textbf{95\%}\\
+% \textbf{2015} & \textit{Secondary School Certificate Examination}, \textbf{CBSE}\\
+% \hfill GPA & \textbf{10}/10 \\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS 
+%----------------------------------------------------------------------------------------
+
+\section{\textcolor{primary}{Technical Skills}}
+\begin{tabular}{r|p{15cm}}
+\textsc{Programming Languages} & C | C++ | Java | JavaScript | Python | Bash \\
+\textsc{Libraries / Frameworks} & Android | ReactJS | Django \\
+\textsc{Databases} & SQLite | MongoDB | MySQL \\
+\textsc{Systems / Platforms} & GitHub | Docker | Linux | Heroku | Firebase | Jenkins CI \\
+\textsc{Web / Servers} & HTML | CSS | Jekyll | nginx | Liquidity \\
+\textsc{Others} & Debian | Latex | LabView | Photoshop \\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace{-0.05cm}
+\section{\textcolor{primary}{Experience}}
+\begin{tabularx}{\linewidth}{ l | X }
+
+\textsc{Jan 19} & \textbf{Research Assistant: {\href{https://1drv.ms/p/s!Ar8TTHqOSXxfozW1Yu2uD4biuj5B}{\ CDN on Blockchain}}}\hfill\textbf{NIT Rourkela}\\
+\textsc{Present}& {- I am working on a Blockchain based Content Delivery Network (CDN). This will enable web hosting companies to utilise their comatose resources to generate revenue}\\
+& {- I am also investigating Blockchain perspectives and challenges and implementing distributed content delivery, load balancing, DDoS mitigation, smart contracts development}\\
+
+\textsc{Nov 18} & \textbf{Student Developer: {\href{https://proxymaster.herokuapp.com/}{\ Proxy Master}}}\hfill\textbf{Kharagpur Winter of Code, IITKGP}\\
+\textsc{Dec 18}& {- A bash script which sets/unsets proxy for most frequently used commands in Debian/Ubuntu}\\
+& {- Contributed to code refractory and built a static website containing the instructions to run the script}\\
+
+
+
+%\multicolumn{2}{c}{} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+\vspace{-0.15cm}
+\section{\textcolor{primary}{\href{https://www.github.com/baymac}{Projects}}}
+\vspace{-0.6cm}
+\begin{tabular}{p{19.7cm}}
+% \fontsize{9}{12}\selectfont{
+\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
+ \item[{\href{https://github.com/baymac/Biryanify}{Biryanify}, Mobile App}] Developed an Android app to manage food orders. The orders are taken through a Google form and each response is sent to the firebase db. App contains an event listener which is triggered upon new order and sends a notification to the user. The app lets you manage inventory by viewing, modifying, deleting and processing orders.
+
+ \item[{\href{https://github.com/baymac/blockchain-node}{Blockchain Node}, Web App}] Developed a nodejs web app for a blockchain client node. Implemented asynchronous GET and POST requests that allows peer nodes to communicate with each other on the Blockchain.
+ 
+\item[{\href{https://github.com/baymac/Football-Gallery}{Football Gallery}, Web App}] Developed a front-end gallery app. The web app is made as much responsive as possible using plain CSS and JS without the use of libraries or framework. Learned about adaptive layouts, responsive layouts, DOM and callback functions. 
+
+ \item[{\href{https://github.com/baymac/Fee-Management-in-Cpp}{Fee Management}, Terminal App}] Developed a commandline app in C++ to manage fees of students. Used features such as file handling, object oriented design, functional programming to implement functions for registering and searching students, displaying and modifying fees structure and more.
+ 
+\end{description}
+% }
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	Activities & Leadership
+%----------------------------------------------------------------------------------------
+\vspace{-0.6cm}
+\section{\textcolor{primary}{Activities \& Leadership}}
+
+\begin{itemize}[leftmargin=0.55cm, rightmargin=0.2cm, label={\Large\textbullet}]
+\item \textbf{Secretary, {Technical Society}}: 
+Elected to work in the core team for Innovision, Odisha's largest Technical Fest. Responsible for fostering participation, promoting the growth of the event and maintaining relations. I was also in-charge of finances and activities of all the clubs under technical society.
+\item \textbf{Admin, \href{https://www.biryanify.com}{Biryanify}}: Hosted an e-commerce website for our family-run business on Shopify. Customized the website along with content writing and graphics design for digital marketing on \href{https://www.facebook.com/biryanify}{Facebook} and \href{https://www.instagram.com/biryanify/}{Instagram}.
+
+% \item \textbf{Secretary, CodeClub IIT Kharagpur}: Developed and managed website for Bitwise 2018 and \href{http://upai-summit.in/}{up.AI 2018}, West Bengal's largest Artificial Intelligence and Machine-Learning summit.
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	Technical Interests
+%----------------------------------------------------------------------------------------
+
+% \vspace{-0.4cm}
+% \section{\textcolor{primary}{Technical Interests}}
+
+% \noindent Cloud Computing, Bot Creation And Task Automation, Cryptography, Game Development, Machine Learning, Big Data, Linux \\
+
+%----------------------------------------------------------------------------------------
+%	Interest
+%----------------------------------------------------------------------------------------
+\vspace{-0.15cm}
+\section{\textcolor{primary}{Interest}}
+\begin{tabularx}{\linewidth}{ l | X }
+
+\item \textsc{{Fun Hacks}} & {- Used ncdc dc++ client to snoop on the searches of users and parse the results from the log  }\\
+\textsc& {- Wrote a Batch script in windows to automate the Ethernet connection enable/disable }\\
+\textsc& {- Wrote a python script on Android to make a bot that does phone calls for reminder }\\
+
+\textsc{Hobbies} & {Football, Travel, Gaming, Reading Tech Blogs}\\
+
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	COURSEWORK
+%----------------------------------------------------------------------------------------
+\vspace{-0.05cm}
+\section{\textcolor{primary}{Relevant Coursework}
+\hfill\small\textsc{(T)heory and (L)aboratory}}
+
+\begin{tabular}{r|p{15cm}}
+\textsc{Completed} & Math for CS - MIT Open Courseware, Algorithms \& Data Structures - Coursera  \\
+\textsc{Current} & Blockchain Developer Decal - UCB Blockchain, Operating Systems - UC Berkley
+\end{tabular}
+
+% ----------------------------------------------------------------------------------------
+
+\end{document}
