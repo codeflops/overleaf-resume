@@ -14,7 +14,7 @@ pipeline {
 		stage('Deploy') {
 			agent any			
 			steps {
-				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: 'sample.pdf'
+				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: 'overleaf-resume_master/sample.pdf'
 			}
 		}
 	}
