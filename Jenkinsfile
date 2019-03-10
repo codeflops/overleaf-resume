@@ -8,7 +8,7 @@ pipeline {
 				}
 			}
 			steps {
-				sh 'xelatex -output-directory=/var/jenkins_home/workspace/sources sample.tex'
+				sh 'xelatex -output-directory=/var/jenkins_home/workspace/sources/ sample.tex'
 			}
 		}
 		stage('Deploy') {
