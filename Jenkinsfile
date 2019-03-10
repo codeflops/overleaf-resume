@@ -8,7 +8,7 @@ pipeline {
 				}
 			}
 			steps {
-				sh 'xelatex main.tex'
+				sh 'xelatex sample.tex'
 			}
 		}
 	}
