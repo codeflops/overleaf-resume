@@ -12,6 +12,7 @@ pipeline {
 			}
 		}
 		stage('Deploy') {	
+			agent any
 			steps {
 				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: 'sources/sample.pdf'
 			}
