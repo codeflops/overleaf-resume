@@ -11,8 +11,7 @@ pipeline {
 				sh 'xelatex -output-directory=/var/jenkins_home/workspace/sources/ sample.tex'
 			}
 		}
-		stage('Deploy') {
-			agent any			
+		stage('Deploy') {	
 			steps {
 				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: 'sources/sample.pdf'
 			}
