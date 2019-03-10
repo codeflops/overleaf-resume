@@ -11,6 +11,10 @@ pipeline {
 				sh 'xelatex sample.tex'
 			}
 		}
+		stage('Deploy') {
+			steps {
+				sh 'dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: 'sample.pdf''
+		}
 	}
 }
 
