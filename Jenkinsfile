@@ -4,7 +4,7 @@ pipeline {
 		stage('Build') {
 			agent {
 				docker {
-					image 'schickling/latex'
+					image 'moss/xelatex'
 				}
 			}
 			steps {
