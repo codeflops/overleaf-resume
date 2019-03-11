@@ -1,0 +1,8 @@
+sudo: required
+dist: trusty     # Ubuntu 14.04
+services: docker # use Dockerfile
+script:
+- wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
+- chmod +x latexdockercmd.sh
+- mkdir -p ./build
+- ./latexdockercmd.sh latexmk -pdf -outdir=./build
