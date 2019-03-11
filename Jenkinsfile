@@ -8,13 +8,13 @@ pipeline {
 				}
 			}
 			steps {
-				sh 'xelatex -output-directory=/var/jenkins_home/workspace/sources/ sample.tex'
+				sh 'xelatex sample.tex'
 			}
 		}
 		stage('Deliver') {	
 			agent any
 			steps {
-				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: '../sources/*.*'
+				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: '*.pdf'
 			}
 		}
 	}
