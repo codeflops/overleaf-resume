@@ -1,9 +1,10 @@
 pipeline {
-	agent 
+	agent { 
 		docker {
 			image 'moss/xelatex'
 			}
-		}	
+		}
+	}	
 	stages {
 		stage('Build') {
 			steps {
