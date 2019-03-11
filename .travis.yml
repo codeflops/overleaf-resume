@@ -7,16 +7,18 @@ script:
 - "./latexdockercmd.sh latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
   -outdir=./_build"
 - ls ./_build
-before_deploy:
-  # Set up git user name and tag this commit
-  - git config --local user.name "YOUR GIT USER NAME"
-  - git config --local user.email "YOUR GIT USER EMAIL"
-  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  - git tag $TRAVIS_TAG
+# before_deploy:
+#   # Set up git user name and tag this commit
+#   - git config --local user.name "YOUR GIT USER NAME"
+#   - git config --local user.email "YOUR GIT USER EMAIL"
+#   - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d')-$(git log --format=%h -1)}
+#   - git tag $TRAVIS_TAG
 deploy:
   provider: releases
   api_key:
     secure: rfNc9eGBnIRqs5ZnzdcZJoHm2aaKLI+x1iZHb/WzQW4Xq9EijqEPJa435jJSB9ps0JarNAGkDozlFUWqgEsZXepabK6vap03xWLgMm1RJZPrxSd7UTltNAud+Vsx5gGRq/3ok2e65S5Reg87hJL38GFmvWOxPSugyS2TSR/tSEFnZs6lDYClQdWACQdV60oBHDvYmB3pv6J2QdUeiM/uJjGd4ZKMzKOxwcGIb7NViUuqU1ghrHvikgD4/9clqCsPir/CVGG61zHDIfy1seLpi1fuhi0jWPDmZzI1heirLh3DTf5FQY5Iw1yeZr/zbya9bGcl4vNfpk6KILF0JSiVUl5XE7c44mLsevKOD/cxeJHYk76zztMbovM3saudlMTyMHYu/teQi7/FDwGTlQudKSQjIC7Bi9+9CEMeVgfbljoHXOMPdW+Den62HCP6HBuzfddqKLlbCpFVGeBDML4t1RWMgRC/y7KTySBy49NtZlZ80Wv6wCPm604Ymo3JcZp85l+lpur7bupXFnqyN9UfWPL6ESyfwgnpRtlTTkMpB6v2FIB81yg6M6MWm26TywZcleTAERcmAuZz+knMpxy9pZHHvs89U61mATn6YXC1shHetaKZL0aMinLO5TUaVpAP0oUlUXPY518b3i3eEQqKbxUU0H/s8UdPyctjJlG9rqU=
   file: "./_build/main.pdf"
+  skip_cleanup: true
   on:
     repo: baymac/overleaf-resume
+    tags: true
