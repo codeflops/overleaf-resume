@@ -1,7 +1,15 @@
-sudo: required
-dist: trusty # Ubuntu 14.04
-services: docker # Enables docker
+language: cpp
+compiler:
+  - gcc
+branches:
+  only:
+    - master
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install texlive-fonts-recommended
+  - sudo apt-get install texlive-fonts-extra
+  - sudo apt-get install texlive-latex-extra
+  - sudo apt-get install texlive-xetex
 script:
-- chmod +x latexdockercmd.sh
-- ./latexdockercmd.sh latexmk -pdf sample.tex -outdir=./_build
-- ./dropbox_uploader.sh upload _build/sample.pdf ${TRAVIS_BRANCH}/sample-latest.pdf  
+  - mkdir -p build
+  - xelatex -output-directory=./build main.tex
