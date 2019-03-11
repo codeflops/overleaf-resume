@@ -4,4 +4,4 @@ services: docker # Enables docker
 script:
 - wget https://raw.githubusercontent.com/baymac/overleaf-resume/master/latexdockercmd.sh
 - chmod +x latexdockercmd.sh
-- ./latexdockercmd.sh latexmk -pdf -outdir=./_build
+- ./latexdockercmd.sh xelatex -pdf 
