@@ -9,6 +9,4 @@ deploy:
   api_key: aa0bbda078f021069f5cc28d8effb4ed53beed4a
   file: _build/sample.pdf
   skip_cleanup: true
-  on:
-    repo: baymac/overleaf-resume
-    tags: true
+  draft: true
