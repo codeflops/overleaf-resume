@@ -3,8 +3,7 @@ pipeline {
 		docker {
 			image 'moss/xelatex'
 			}
-		}
-	}	
+		}	
 	stages {
 		stage('Build') {
 			steps {
