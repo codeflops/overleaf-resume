@@ -3,4 +3,5 @@ dist: trusty # Ubuntu 14.04
 services: docker # Enables docker
 script:
 - chmod +x latexdockercmd.sh
-- ./latexdockercmd.sh latexmk -pdf sample.tex
+- ./latexdockercmd.sh latexmk -pdf sample.tex -outdir=./_build
+- ./dropbox_uploader.sh upload _build/sample.pdf ${TRAVIS_BRANCH}/sample-latest.pdf  
