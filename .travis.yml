@@ -7,6 +7,8 @@ before_install:
 script:
 - chmod +x latexdockercmd.sh
 - "./latexdockercmd.sh latexmk -xelatex sample.tex -outdir=./_build"
+- ./dropbox_uploader.sh upload _build/sample.pdf ${TRAVIS_BRANCH}/sample-latest.pdf
+- ./dropbox_uploader.sh upload _build/sample.pdf ${TRAVIS_BRANCH}/sample-${TRAVIS_JOB_NUMBER}.pdf
 # before_deploy:
 # - git config --local user.name "YOUR GIT USER NAME"
 # - git config --local user.email "YOUR GIT USER EMAIL"
