@@ -13,7 +13,7 @@ It is recommended to view and modify the project over [Overleaf](https://www.ove
 The project can be build using `xelatex` on linux systems.
 
 ## Install
-sudo apt-get install texlive-fonts-recommended
-sudo apt-get install texlive-fonts-extra
-sudo apt-get install texlive-latex-extra
-sudo apt-get install texlive-xetex
+sudo apt-get install texlive-fonts-recommended<br />
+sudo apt-get install texlive-fonts-extra<br />
+sudo apt-get install texlive-latex-extra<br />
+sudo apt-get install texlive-xetex<br />
