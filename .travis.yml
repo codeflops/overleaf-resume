@@ -3,7 +3,7 @@ dist: trusty
 services: docker
 script:
 - chmod +x latexdockercmd.sh
-- "./latexdockercmd.sh latexmk -pdf -outdir=./_build"
+- "./latexdockercmd.sh latexmk -xelatex -outdir=./_build"
 deploy:
   provider: releases
   api_key: aa0bbda078f021069f5cc28d8effb4ed53beed4a
