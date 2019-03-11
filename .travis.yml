@@ -6,7 +6,6 @@ script:
 - chmod +x latexdockercmd.sh
 - "./latexdockercmd.sh latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
   -outdir=./_build"
-- ls ./_build
 # before_deploy:
 #   # Set up git user name and tag this commit
 #   - git config --local user.name "YOUR GIT USER NAME"
