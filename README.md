@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/baymac/overleaf-resume.svg?branch=master)](https://travis-ci.com/baymac/overleaf-resume)
-
 # Resume
 Parichay's resume, and it's latex code.
 
