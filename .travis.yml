@@ -2,6 +2,5 @@ sudo: required
 dist: trusty # Ubuntu 14.04
 services: docker # Enables docker
 script:
-- wget https://raw.githubusercontent.com/baymac/overleaf-resume/master/latexdockercmd.sh
 - chmod +x latexdockercmd.sh
 - ./latexdockercmd.sh latexmk -pdf sample.tex
