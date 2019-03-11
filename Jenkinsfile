@@ -14,13 +14,8 @@ pipeline {
 		stage('Deliver') {	
 			agent any
 			steps {
-				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: 'sources/sample.pdf'
+				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: 'sources/*.pdf'
 			}
-			post {
-                success {
-                    archiveArtifacts 'dist/sample' 
-                }
-            }
 		}
 	}
 }
