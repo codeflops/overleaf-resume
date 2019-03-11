@@ -14,6 +14,6 @@ deploy:
   api_key: b4fc13fa0eceac5bcdde581e62b2562f2135c422
   file: _build/sample.pdf
   skip_cleanup: true
-before_install:
-- openssl aes-256-cbc -K $encrypted_a63f797455b2_key -iv $encrypted_a63f797455b2_iv
-  -in .dropbox_uploader.enc -out ~\/.dropbox_uploader -d
+# before_install:
+# - openssl aes-256-cbc -K $encrypted_a63f797455b2_key -iv $encrypted_a63f797455b2_iv
+#   -in .dropbox_uploader.enc -out ~\/.dropbox_uploader -d
