@@ -14,7 +14,7 @@ pipeline {
 		stage('Deliver') {	
 			agent any
 			steps {
-				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: '*.*'
+				dropbox configName: 'My Resume', remoteDirectory: '/Resume', removePrefix: '', sourceFiles: '../sources/*.*'
 			}
 		}
 	}
