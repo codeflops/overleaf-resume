@@ -5,4 +5,4 @@ script:
 - wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
 - chmod +x latexdockercmd.sh
 - mkdir -p ./build
-- ./latexdockercmd.sh latexmk -pdf -outdir=./build
+- ./latexdockercmd.sh latexmk -xelatex main.tex -outdir=./build
