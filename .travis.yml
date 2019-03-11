@@ -6,7 +6,8 @@ script:
 - "./latexdockercmd.sh latexmk -xelatex sample.tex -outdir=./_build"
 deploy:
   provider: releases
-  api_key: aa0bbda078f021069f5cc28d8effb4ed53beed4a
+  api_key: b4fc13fa0eceac5bcdde581e62b2562f2135c422
   file: _build/sample.pdf
   skip_cleanup: true
-  draft: true
+  on:
+    tags: false
