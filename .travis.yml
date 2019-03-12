@@ -21,4 +21,3 @@ deploy:
   skip_cleanup: true
   on:
     repo: baymac/overleaf-resume
-    tags: true
