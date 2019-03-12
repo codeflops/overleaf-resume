@@ -10,6 +10,9 @@ for (( i=1; i<${#arg}; i++ )); do
 		decimal="true"
 		continue
 	fi
+	if [ "$ch" == "-" ]; then
+		break
+	fi
 	if [ "$decimal" == "false" ]; then
 		left="${left}${ch}"
 	else
