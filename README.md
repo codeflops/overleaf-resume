@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/baymac/overleaf-resume.svg?branch=master)](https://travis-ci.org/baymac/overleaf-resume)
+[![GitHub release](https://img.shields.io/github/release/baymac/overleaf-resume.svg)](https://github.com/baymac/overleaf-resume-releases)
+
 # Resume
 Parichay's resume, and it's latex code.
 
