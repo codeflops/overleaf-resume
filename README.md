@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/baymac/overleaf-resume.svg?branch=master)](https://travis-ci.org/baymac/overleaf-resume)
 [![GitHub release](https://img.shields.io/github/release/baymac/overleaf-resume.svg)](https://github.com/baymac/overleaf-resume-releases)
+![GitHub All Releases](https://img.shields.io/github/downloads/baymac/overleaf-resume/total.svg)](https://www.dropbox.com/s/hkq7iiyksd0crlp/Parichay_NITR-latest.pdf?dl=0)
 
 # Resume
 Parichay's resume, and it's latex code.
