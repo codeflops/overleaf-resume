@@ -8,7 +8,6 @@ script:
 - chmod +x latexdockercmd.sh  
 - "./latexdockercmd.sh latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
   -outdir=./_build"
-- chmod +x dropbox_uploader.sh
 - ./dropbox_uploader.sh upload _build/main.pdf Resume/Parichay_NITR-latest.pdf
 before_deploy:
   - git config --local user.name "YOUR GIT USER NAME"
