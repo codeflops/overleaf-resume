@@ -3,15 +3,16 @@ dist: trusty
 services: docker
 script:
 - wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
-- chmod +x latexdockercmd.sh
+- chmod +x latexdockercmd.sh  
 - "./latexdockercmd.sh latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
   -outdir=./_build"
-# before_deploy:
-#   # Set up git user name and tag this commit
-#   - git config --local user.name "YOUR GIT USER NAME"
-#   - git config --local user.email "YOUR GIT USER EMAIL"
-#   - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d')-$(git log --format=%h -1)}
-#   - git tag $TRAVIS_TAG
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "YOUR GIT USER NAME"
+  - git config --local user.email "YOUR GIT USER EMAIL"
+  - export LATEST_TAG=$(git describe --tags)
+  - export TRAVIS_TAG=$(./genTag.sh ${LATEST_TAG})
+  - git tag $TRAVIS_TAG
 deploy:
   provider: releases
   api_key:
