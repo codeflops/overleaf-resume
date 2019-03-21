@@ -3,11 +3,13 @@ pipeline {
    stages {
       stage('Build') {
          steps {
-	     def image = docker.image('blang/latex:ubuntu')
-	     image.pull()
-	     image.inside() {
-	             sh 'xelatex sample.tex'
-	     }
+	     script {
+	     		def image = docker.image('blang/latex:ubuntu')
+	     		image.pull()
+	     		image.inside() {
+	            		sh 'xelatex sample.tex'
+	    		}
+		}
          }
       }
    }
