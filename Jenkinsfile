@@ -2,13 +2,12 @@ pipeline {
    agent none
    stages {
       stage('Build') {
-         agent {
-            docker {
-               image 'blang/latex:ubuntu'
-            }
-         }
          steps {
-             sh 'xelatex sample.tex'
+	     def image = docker.image('blang/latex:ubuntu')
+	     image.pull()
+	     image.inside() {
+	             sh 'xelatex sample.tex'
+	     }
          }
       }
    }
